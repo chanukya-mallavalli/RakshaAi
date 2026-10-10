@@ -1,0 +1,32 @@
+{
+  "appName": "RakshaAI",
+  "tagline": "Pause. Check. Stay Safe.",
+  "heroTitle": "Not sure if a message, link or call is genuine?",
+  "heroSubtitle": "Ask RakshaAI before you click, pay, or reply. We explain safety in plain, caring words.",
+  "elderlyFriendlyNotice": "Your digital safety companion. Never share OTPs, PINs, or banking passwords.",
+  "nav": {
+    "home": "Home",
+    "check": "Safety Check",
+    "tips": "Safety Guides",
+    "history": "History",
+    "family": "Family Protection"
+  },
+  "actions": {
+    "checkMessage": "Check Message",
+    "checkLink": "Check Link",
+    "checkScreenshot": "Check Screenshot",
+    "checkQr": "Check QR Code",
+    "checkCall": "Check Call",
+    "analyzeNow": "Verify Safety Now",
+    "readAloud": "Read Aloud",
+    "alertFamily": "Alert Trusted Family",
+    "clear": "Clear",
+    "simpleMode": "Senior Friendly Mode"
+  },
+  "status": {
+    "safe": "Likely Safe",
+    "suspicious": "Caution Needed",
+    "dangerous": "High Scam Risk",
+    "unableToVerify": "Unable to Verify"
+  }
+}
