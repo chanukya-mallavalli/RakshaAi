@@ -1,6 +1,8 @@
 import type { HealthStatus, AnalysisResult, HistoryItem } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.
+VITE_API_BASE_URL || 'https://rakshaai-zj73.onrender.com/api/v1';
+
 
 // ─── Health ───────────────────────────────────────────────
 export async function fetchHealth(): Promise<HealthStatus> {
