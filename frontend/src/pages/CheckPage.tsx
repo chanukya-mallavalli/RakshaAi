@@ -284,14 +284,16 @@ export const CheckPage: React.FC<CheckPageProps> = ({ currentLang }) => {
   return (
     <div className="max-w-4xl mx-auto space-y-8 py-6">
       {/* Header */}
-      <div className="text-center space-y-2">
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#0f172a] tracking-tight">
-          RakshaAI Safety Inspection
-        </h1>
-        <p className="font-serif italic text-[#64748b] text-base sm:text-lg">
-          Paste what you received below. We will inspect it for scam red flags immediately.
-        </p>
-      </div>
+     {/* Header */}
+<div className="space-y-2 text-center">
+  <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#f5f8ff] tracking-tight">
+    RakshaAI Safety Inspection
+  </h1>
+
+  <p className="font-serif italic text-[#a9b9d4] text-base sm:text-lg">
+    Paste what you received below. We will inspect it for scam red flags immediately.
+  </p>
+</div>
 
       {/* Tab Selector */}
       <div className="flex flex-wrap items-center justify-center gap-2 p-2 bg-[#f4ece1] rounded-2xl border border-[#e2d5c3]">

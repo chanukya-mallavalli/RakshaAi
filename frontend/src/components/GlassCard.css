@@ -1,0 +1,35 @@
+
+.ra-glass-card {
+  position: relative;
+  min-width: 0;
+  padding: 24px;
+  overflow: hidden;
+
+  background: var(--ra-glass);
+  border: 1px solid var(--ra-glass-border);
+  border-radius: var(--ra-radius);
+  box-shadow: var(--ra-shadow);
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.ra-glass-card--interactive:hover {
+  transform: translateY(-3px);
+  border-color: rgba(66, 232, 245, 0.38);
+}
+
+.ra-glass-card:focus-within {
+  border-color: var(--ra-cyan);
+}
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .ra-glass-card--interactive:hover {
+    transform: none;
+  }
+}

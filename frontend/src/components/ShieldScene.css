@@ -1,0 +1,332 @@
+
+.ra-shield-scene {
+  --shield-cyan: #42e8f5;
+  --shield-blue: #258aff;
+  --shield-violet: #9b72ff;
+
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  min-height: 390px;
+  aspect-ratio: 1.18 / 1;
+  place-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(110, 183, 255, 0.25);
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at 50% 46%,
+      rgba(38, 143, 255, 0.19),
+      transparent 37%
+    ),
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(155, 114, 255, 0.14),
+      transparent 34%
+    ),
+    linear-gradient(145deg, #0d1e39 0%, #071226 54%, #10142f 100%);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.ra-shield-scene__ambient {
+  position: absolute;
+  z-index: -1;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(34, 166, 255, 0.13);
+  filter: blur(55px);
+  animation: ra-ambient-pulse 6s ease-in-out infinite alternate;
+}
+
+.ra-shield-scene__grid {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(83, 169, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83, 169, 255, 0.15) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(transparent, black 25%, black 75%, transparent);
+}
+
+.ra-shield-halo {
+  position: relative;
+  display: grid;
+  width: 43%;
+  max-width: 230px;
+  min-width: 145px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(66, 232, 245, 0.16);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(66, 232, 245, 0.15),
+    rgba(37, 138, 255, 0.04) 55%,
+    transparent 72%
+  );
+  box-shadow:
+    0 0 45px rgba(37, 138, 255, 0.16),
+    inset 0 0 36px rgba(66, 232, 245, 0.08);
+  animation: ra-shield-float 5s ease-in-out infinite;
+}
+
+.ra-shield-halo__inner {
+  display: grid;
+  width: 76%;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(66, 232, 245, 0.1),
+    rgba(7, 17, 38, 0.08) 70%
+  );
+}
+
+.ra-shield-icon {
+  display: block;
+  width: 82%;
+  overflow: visible;
+  filter: drop-shadow(0 0 18px rgba(66, 232, 245, 0.26));
+}
+
+.ra-shield-orbit {
+  position: absolute;
+  width: 64%;
+  height: 29%;
+  border: 1px solid rgba(66, 232, 245, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ra-shield-orbit--one {
+  transform: rotate(-14deg);
+}
+
+.ra-shield-orbit--two {
+  width: 77%;
+  height: 38%;
+  border-color: rgba(155, 114, 255, 0.3);
+  transform: rotate(20deg);
+}
+
+.ra-shield-orbit--three {
+  width: 55%;
+  height: 65%;
+  border-color: rgba(37, 138, 255, 0.22);
+  transform: rotate(48deg);
+}
+
+.ra-shield-orbit span {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--shield-cyan);
+  box-shadow: 0 0 14px var(--shield-cyan);
+}
+
+.ra-shield-orbit--two span {
+  top: auto;
+  right: 12%;
+  bottom: 12%;
+  left: auto;
+  background: #bd83ff;
+  box-shadow: 0 0 14px #bd83ff;
+}
+
+.ra-shield-orbit--three span {
+  top: 46%;
+  left: 3%;
+  background: #65a7ff;
+  box-shadow: 0 0 14px #65a7ff;
+}
+
+.ra-shield-label {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #b6c8e4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ra-status-dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #32d583;
+  box-shadow: 0 0 12px rgba(50, 213, 131, 0.65);
+}
+
+.ra-shield-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid rgba(120, 177, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(7, 17, 38, 0.82);
+  color: #dce9ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  backdrop-filter: blur(14px);
+}
+
+.ra-shield-floating-card {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  max-width: 235px;
+  padding: 13px 15px;
+  border: 1px solid rgba(113, 174, 255, 0.24);
+  border-radius: 16px;
+  background: rgba(6, 17, 39, 0.92);
+  box-shadow: 0 15px 36px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+}
+
+.ra-shield-floating-card--top {
+  top: 25%;
+  right: 4%;
+  animation: ra-card-float 5s ease-in-out infinite;
+}
+
+.ra-shield-floating-card--bottom {
+  bottom: 15%;
+  left: 3%;
+  animation: ra-card-float 5s ease-in-out -2.5s infinite;
+}
+
+.ra-shield-floating-card strong,
+.ra-shield-floating-card small {
+  display: block;
+}
+
+.ra-shield-floating-card strong {
+  color: #f5f8ff;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ra-shield-floating-card small {
+  margin-top: 3px;
+  color: #a9bad7;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.ra-floating-icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 11px;
+  background: rgba(66, 232, 245, 0.13);
+  color: var(--shield-cyan);
+  font-size: 21px;
+}
+
+.ra-floating-icon--green {
+  background: rgba(50, 213, 131, 0.12);
+  color: #32d583;
+}
+
+.ra-shield-scene--compact {
+  min-height: 220px;
+  border-radius: 22px;
+}
+
+.ra-shield-scene--compact .ra-shield-floating-card {
+  display: none;
+}
+
+.ra-shield-scene--compact .ra-shield-caption {
+  bottom: 12px;
+  padding: 9px 12px;
+  font-size: 9px;
+}
+
+@keyframes ra-shield-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes ra-card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes ra-ambient-pulse {
+  from { opacity: 0.65; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1.08); }
+}
+
+@media (max-width: 600px) {
+  .ra-shield-scene {
+    min-height: 310px;
+    border-radius: 22px;
+  }
+
+  .ra-shield-floating-card {
+    max-width: 185px;
+    padding: 10px;
+  }
+
+  .ra-shield-floating-card--top {
+    top: 20%;
+    right: 3%;
+  }
+
+  .ra-shield-floating-card--bottom {
+    bottom: 13%;
+    left: 3%;
+  }
+
+  .ra-shield-floating-card strong {
+    font-size: 10px;
+  }
+
+  .ra-shield-floating-card small {
+    font-size: 9px;
+  }
+
+  .ra-shield-label {
+    top: 17px;
+    left: 16px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ra-shield-scene *,
+  .ra-shield-scene::before,
+  .ra-shield-scene::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

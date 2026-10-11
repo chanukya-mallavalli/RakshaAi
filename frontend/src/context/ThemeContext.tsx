@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import type { ThemeSettings, BackgroundThemeType, PlainVariant } from '../types';
+import type { ThemeSettings } from '../types';
 
 const DEFAULT_THEME: ThemeSettings = {
   bgTheme: 'gradient',

@@ -1,0 +1,43 @@
+
+:root {
+  color-scheme: dark;
+
+  /* RakshaAI brand */
+  --ra-bg: #040916;
+  --ra-bg-secondary: #07152b;
+  --ra-surface: #0b1c36;
+  --ra-surface-raised: #102746;
+
+  --ra-cyan: #42e8f5;
+  --ra-blue: #258aff;
+  --ra-violet: #9b72ff;
+  --ra-pink: #ed6dff;
+
+  --ra-success: #32d583;
+  --ra-warning: #ffbf69;
+  --ra-danger: #ff5d73;
+
+  --ra-text: #f5f8ff;
+  --ra-text-muted: #a9b9d4;
+  --ra-border: rgba(130, 177, 255, 0.2);
+
+  /* Glass surfaces */
+  --ra-glass: rgba(10, 25, 50, 0.76);
+  --ra-glass-strong: rgba(7, 18, 39, 0.94);
+  --ra-glass-border: rgba(112, 203, 255, 0.25);
+
+  /* Depth */
+  --ra-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --ra-glow-cyan: 0 0 28px rgba(66, 232, 245, 0.18);
+  --ra-glow-violet: 0 0 36px rgba(155, 114, 255, 0.2);
+
+  /* Layout */
+  --ra-radius-sm: 12px;
+  --ra-radius-md: 20px;
+  --ra-radius-lg: 28px;
+  --ra-content-width: 1440px;
+
+  /* Motion */
+  --ra-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ra-duration: 240ms;
+}
