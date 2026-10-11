@@ -21,13 +21,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
     
     # CORS
-    CORS_ORIGINS: List[str] = [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:3000"
-    ]
-    
+    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://127.0.0.1:3000"
     # AI Provider configuration
     AI_PROVIDER: str = "rule_fallback"  # Options: rule_fallback, gemini, openai, groq
     GEMINI_API_KEY: str = ""
